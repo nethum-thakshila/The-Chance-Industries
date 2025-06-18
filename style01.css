@@ -270,30 +270,41 @@ section {
 }
 
 /* ------------------------------
-     MEDIA QUERIES
-  ------------------------------ */
-
-/* For mobile screens */
+   EXTRA MOBILE RESPONSIVENESS
+------------------------------ */
 @media (max-width: 768px) {
-  .nav-list {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    gap: 0;
-    width: 200px;
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+  /* make hero adapt height & text */
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .hero-content h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+  .hero-content p {
+    font-size: 1rem;
   }
 
-  .nav-list.open {
-    transform: translateX(0);
+  /* stack service cards to one column */
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
-  .menu-toggle {
-    display: flex;
+  /* stack gallery to one column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* tighten up contact form */
+  .contact-form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* make footer text smaller and wrap */
+  .footer-container p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
   }
 }
